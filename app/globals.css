@@ -73,6 +73,7 @@ nav {
   align-items: center;
   padding: 0 4rem;
   position: relative;
+  overflow: hidden;
 }
 
 .hero-inner {
@@ -433,17 +434,26 @@ footer {
   transform: translateY(0);
 }
 
-/* ── ORBIT CANVAS ── */
-#orbit-canvas {
+/* ── STICKER ANIMATION ── */
+#sticker-container {
   position: absolute;
-  right: 4rem;
+  right: -5%;
   top: 50%;
-  transform: translateY(-50%);
-  width: 400px;
-  height: 400px;
+  transform: translateY(-50%) scale(1.5);
+  width: 50%;
+  height: 120%;
   pointer-events: none;
   opacity: 0;
-  animation: fadeUp 1.2s 1.2s forwards;
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* ── RESPONSIVE ── */
@@ -460,7 +470,7 @@ footer {
     padding: 0 2rem;
   }
 
-  #orbit-canvas {
+  #sticker-container {
     display: none;
   }
 
