@@ -32,7 +32,7 @@ export default function Hero() {
 
       <div id="sticker-container">
         <Image
-          src="/images/me_archery-removebg-preview-mirrored_scaled.png"
+          src="/images/archery_focused_edited_flipped.png"
           alt="Matthieu with archery"
           width={800}
           height={800}

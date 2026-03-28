@@ -439,9 +439,9 @@ footer {
   position: absolute;
   right: -5%;
   top: 50%;
-  transform: translateY(-50%) scale(1.5);
-  width: 50%;
-  height: 120%;
+  transform: translateY(-50%);
+  width: 40%;
+  height: 100%;
   pointer-events: none;
   opacity: 0;
   animation: fadeIn 1.5s ease-in forwards;
