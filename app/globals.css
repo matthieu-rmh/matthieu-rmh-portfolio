@@ -112,7 +112,7 @@ h1.hero-title em {
   font-size: 0.85rem;
   line-height: 1.8;
   max-width: 480px;
-  color: var(--muted);
+  color: #000000;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
   margin-bottom: 3rem;
   opacity: 0;
@@ -230,7 +230,7 @@ section {
   color: var(--ink) !important;
 }
 
-.project-card > * {
+.project-card>* {
   position: relative;
   z-index: 1;
 }
@@ -454,6 +454,7 @@ footer {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
