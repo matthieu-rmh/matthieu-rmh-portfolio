@@ -85,6 +85,7 @@ nav {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--muted);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
   margin-bottom: 2rem;
   opacity: 0;
   transform: translateY(20px);
@@ -112,6 +113,7 @@ h1.hero-title em {
   line-height: 1.8;
   max-width: 480px;
   color: var(--muted);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
   margin-bottom: 3rem;
   opacity: 0;
   transform: translateY(20px);
@@ -124,6 +126,7 @@ h1.hero-title em {
   gap: 1rem;
   text-decoration: none;
   color: var(--ink);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -437,8 +440,8 @@ footer {
 /* ── STICKER ANIMATION ── */
 #sticker-container {
   position: absolute;
-  right: -5%;
-  top: 50%;
+  right: 5%;
+  top: 60%;
   transform: translateY(-50%);
   width: 40%;
   height: 100%;
@@ -471,8 +474,34 @@ footer {
   }
 
   #sticker-container {
-    display: none;
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transform: none;
+    z-index: 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
   }
+
+  #sticker-container img {
+    width: 50% !important;
+    height: auto !important;
+    opacity: 0.25;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+  }
+
 
   .projects-grid {
     grid-template-columns: 1fr;
