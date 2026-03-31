@@ -17,7 +17,7 @@ export default function Hero() {
         <h1 className="hero-title">
           Building systems
           <br />
-          that <em>hit</em>
+          that <span className="hero-hit-wrap"><Image src="/icons/target-icon.png" alt="" width={80} height={80} className="hero-hit-icon" aria-hidden /><em>hit</em></span>
           <br />
           their target.
         </h1>

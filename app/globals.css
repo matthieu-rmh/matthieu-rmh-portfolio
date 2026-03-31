@@ -108,6 +108,30 @@ h1.hero-title em {
   color: var(--accent);
 }
 
+.hero-hit-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-hit-wrap em {
+  position: relative;
+  z-index: 1;
+  -webkit-text-stroke: 1px var(--accent);
+}
+
+.hero-hit-icon {
+  position: absolute;
+  left: 325%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 3.2em;
+  height: 3.2em;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .hero-desc {
   font-size: 0.85rem;
   line-height: 1.8;
@@ -472,6 +496,8 @@ footer {
 
   #hero {
     padding: 0 2rem;
+    min-height: unset;
+    padding-bottom: 4rem;
   }
 
   #sticker-container {
@@ -494,7 +520,7 @@ footer {
     opacity: 0.25;
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
   }
 
@@ -503,6 +529,9 @@ footer {
     z-index: 1;
   }
 
+  .hero-hit-icon {
+    display: none;
+  }
 
   .projects-grid {
     grid-template-columns: 1fr;
