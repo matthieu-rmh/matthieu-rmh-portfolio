@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
 interface Project {
@@ -8,6 +9,15 @@ interface Project {
   desc: string;
   tags: string[];
 }
+
+const stickers = [
+  { name: 'Python',     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',         style: { top: '8%',  left: '3%',  animationDelay: '0s',    animationDuration: '6s'  } },
+  { name: 'JavaScript', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg', style: { top: '20%', right: '4%', animationDelay: '1.2s',  animationDuration: '7s'  } },
+  { name: 'Elixir',     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elixir/elixir-original.svg',         style: { top: '55%', left: '1%',  animationDelay: '2s',    animationDuration: '8s'  } },
+  { name: 'React',      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',           style: { top: '70%', right: '3%', animationDelay: '0.5s',  animationDuration: '6.5s'} },
+  { name: 'Phoenix',    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phoenix/phoenix-original.svg',       style: { top: '38%', right: '2%', animationDelay: '3s',    animationDuration: '7.5s'} },
+  { name: 'Python',     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',         style: { top: '85%', left: '4%',  animationDelay: '1.8s',  animationDuration: '9s'  } },
+];
 
 const projects: Project[] = [
   {
@@ -54,7 +64,18 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projects">
+    <section id="projects" style={{ position: 'relative', overflow: 'hidden' }}>
+      {stickers.map((s, i) => (
+        <Image
+          key={i}
+          src={s.src}
+          alt={s.name}
+          width={48}
+          height={48}
+          className="project-sticker"
+          style={{ ...s.style, position: 'absolute', pointerEvents: 'none' }}
+        />
+      ))}
       <div className="section-label">Selected work</div>
       <div className="projects-grid reveal" ref={gridRef}>
         {projects.map((p) => (
