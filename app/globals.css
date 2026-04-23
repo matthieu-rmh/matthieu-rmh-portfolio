@@ -373,6 +373,16 @@ section {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .skill-bar-wrap {
