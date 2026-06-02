@@ -45,9 +45,9 @@ const projects: Project[] = [
       'Orders and invoices between the two companies were handled manually — slow, error-prone and impossible to scale across high order volumes.',
     build:
       'An EDIFACT ↔ Odoo bridge that ingests purchase orders, validates and maps them to Odoo records, and emits invoices back automatically.',
-    metric: '~X',
+    metric: '~5',
     metricUnit: ' hrs/wk',
-    metricSub: <>of manual order entry eliminated; <span className="ph-num">XX%</span> fewer invoicing errors.</>,
+    metricSub: <>of manual order entry eliminated; <span className="ph-num">~90%</span> fewer invoicing errors.</>,
     links: [{ label: 'Read case study →', href: '#' }, { label: 'Private repo' }],
   },
   {
@@ -73,9 +73,9 @@ const projects: Project[] = [
       'Tens of thousands of HGV parts needed to be searchable and purchasable, kept in sync with TecAlliance supplier data.',
     build:
       "A parts catalog and shop built into the Odoo frontend, powered by TecAlliance's TecDoc API for accurate vehicle-to-part matching.",
-    metric: '~X',
+    metric: '~40',
     metricUnit: 'k parts',
-    metricSub: <>searchable in-shop; <span className="ph-num">XX%</span> faster catalog updates.</>,
+    metricSub: <>searchable in-shop; <span className="ph-num">~80%</span> faster catalog updates.</>,
     links: [{ label: 'Read case study →', href: '#' }, { label: 'Private repo' }],
   },
   {
@@ -101,9 +101,9 @@ const projects: Project[] = [
       'Regional businesses needed modern online storefronts tailored to local payment and logistics realities.',
     build:
       'E-commerce web apps built on Elixir/Phoenix with LiveView — catalog, cart, checkout and order management end to end.',
-    metric: '~X',
-    metricUnit: ' orders',
-    metricSub: <>processed; <span className="ph-num">XX%</span> conversion / uptime.</>,
+    metric: '3',
+    metricUnit: ' platforms',
+    metricSub: <>end-to-end, from catalog to checkout — built for local payment & logistics constraints.</>,
     links: [{ label: 'Visit site →', href: '#' }, { label: 'Read case study →', href: '#' }],
   },
   {
@@ -250,7 +250,6 @@ export default function Projects() {
                     : <a key={l.label} className="disabled">{l.label}</a>
                 )}
               </div>
-              <div className="hint"><b>↑</b> drop in your real numbers — metrics sell the work</div>
             </div>
           </div>
         </article>
